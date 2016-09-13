@@ -1,11 +1,11 @@
 {
   "name": "nodeauth-authorizer",
   "version": "1.0.0",
-  "description": "",
+  "description": "AWS API GATEWAY Autorizer.  OWNER- Cris Barbero",
   "main": "index.js",
   "scripts": {
     "test": "claudia test-lambda --event .\\test\\event.json --profile saml",
-    "create": "claudia create --region us-east-1 --name introspection-authorizer --description 'AWS API GATEWAY Autorizer.  OWNER- Cris Barbero' --handler index.handler --profile saml",
+    "create": "claudia create --region us-east-1 --handler index.handler --profile saml",
     "deploy": "claudia update --profile saml"
   },
   "author": "",

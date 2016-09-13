@@ -43,7 +43,7 @@ exports.handler = function(event, context) {
     rp(tokenRequest)
         .then(function(tokenResponse) {
             console.log('Token Request', tokenRequest, tokenResponse);
-            var accessToken = tokenResponse.accessToken;
+            var accessToken = tokenResponse.access_token;
 
             var introspectionRequest = {
                 url: config.authServerUrl + '/oauth/token/introspect',
@@ -67,10 +67,10 @@ exports.handler = function(event, context) {
                         // contained in a response from Authlete's introspection API is
                         // the subject (= unique identifier) of the user who is associated
                         // with the access token.
-                        context.succeed(generate_policy(introspectionResponse.client_id, 'Allow', event.methodArn));
+                        context.succeed(authUtils.generatePolicy(introspectionResponse.client_id, 'Allow', event.methodArn));
                     } else {
                         // Tell API Gateway that the access to the resource should be denined.
-                        context.succeed(generate_policy(introspectionResponse.client_id, 'Deny', event.methodArn));
+                        context.succeed(authUtils.generatePolicy(introspectionResponse.client_id, 'Deny', event.methodArn));
                     }
                 })
                 .catch(function(error) {
