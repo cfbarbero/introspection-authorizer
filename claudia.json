@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "introspection-authorizer-executor",
+    "name": "introspection-authorizer",
+    "region": "us-east-1"
+  }
+}
