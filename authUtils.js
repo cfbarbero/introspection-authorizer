@@ -1,9 +1,9 @@
 var BEARER_TOKEN_PATTERN = /^Bearer[ ]+([^ ]+)[ ]*$/i;
 
 module.exports={
-  extractAccessToken = extractAccessToken,
-  extractMethodAndPath = extractMethodAndPath,
-  generatePolicy = generatePolicy
+  extractAccessToken: extractAccessToken,
+  extractMethodAndPath: extractMethodAndPath,
+  generatePolicy: generatePolicy
 }
 
 // A function to extract an access token from Authorization header.

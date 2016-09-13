@@ -1,0 +1,5 @@
+{
+    "type":"TOKEN",
+    "authorizationToken":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGlzZGVtbyIsInVzZXJJZCI6IjEyMyIsImV4cCI6MTQ3MzQ1MjcxNzU1OSwiaWF0IjoxNDczNDUwOTE3fQ.you7UmbIkTwQ2239vd2pyIsmk97xhNIsoAsb2jzU0a4",
+    "methodArn":"arn:aws:execute-api:us-east-1:<Account id>:<API id>/<Stage>/<Method>/<Resource path>"
+}
